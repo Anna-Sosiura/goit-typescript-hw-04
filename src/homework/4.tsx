@@ -12,14 +12,14 @@ type Menu = { id: MenuIds; title: string };
 
 // Додати тип Menu Selected
 type SelectedMenu = {
-  id?: MenuIds;
+  id: MenuIds;
 };
 type MenuSelected = {
   selectedMenu: SelectedMenu;
 };
 
 const MenuSelectedContext = createContext<MenuSelected>({
-  selectedMenu: {},
+  selectedMenu: { id: "first" },
 });
 
 // Додайте тип MenuAction
